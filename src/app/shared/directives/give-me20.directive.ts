@@ -5,6 +5,6 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class GiveMe20Directive {
   constructor(private el: ElementRef) {
-    this.el.nativeElement.style.backgroundColor = 'yellow';
+    this.el.nativeElement.style.fontSize = '20px';
   }
 }
