@@ -17,4 +17,7 @@ export class NavigComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+  onLogin(): void {
+    alert('El futuro log in es por acá!');
+  }
 }

@@ -2,6 +2,11 @@
   <span class="titulo" appGiveMe20>{{ Titulo }}</span> (con directiva custom
   appGiveMe20
 </p>
+<mat-form-field class="titulo">
+  <mat-label>Filtrar</mat-label>
+  <input type="text" matInput (keyup)="filtrar($event)" />
+</mat-form-field>
+
 <div>
   <table
     mat-table

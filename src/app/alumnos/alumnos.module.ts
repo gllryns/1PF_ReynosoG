@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
 import { FormAlumnosComponent } from './form-alumnos/form-alumnos.component';
 import { DetalleAlumnoComponent } from './detalle-alumno/detalle-alumno.component';
@@ -12,7 +13,14 @@ import { SharedModule } from '../shared/shared.module';
     FormAlumnosComponent,
     DetalleAlumnoComponent,
   ],
-  imports: [CommonModule, MatTableModule, MatSortModule, SharedModule],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatSortModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   exports: [
     MatTableModule,
     ListaAlumnosComponent,

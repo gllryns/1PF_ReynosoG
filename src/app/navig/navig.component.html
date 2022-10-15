@@ -39,9 +39,9 @@
         ariaCurrentWhenActive="page"
         >Home</a
       >
-      <a mat-list-item href="#">Log in</a>
+      <a mat-list-item (click)="onLogin()">Log in</a>
     </mat-toolbar>
-    <div class="ml-2">
+    <div>
       <router-outlet></router-outlet>
     </div>
     <!-- necesito un contenedor acá para setear el padding etc. -->

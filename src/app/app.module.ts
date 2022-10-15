@@ -37,6 +37,7 @@ import { MatTableDataSource } from '@angular/material/table';
     FormsModule,
     HttpClientModule,
     MatTableModule,
+    FormsModule,
   ],
   providers: [MatTableDataSource],
   bootstrap: [AppComponent],
