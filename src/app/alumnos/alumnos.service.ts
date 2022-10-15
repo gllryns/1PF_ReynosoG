@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class AlumnosService {
-  private alumnosUrl = environment.baseUrl + 'api/alumnos';
+  private alumnosUrl = environment.baseUrl + 'alumnos';
 
   constructor(private http: HttpClient) {}
 
@@ -50,9 +50,9 @@ export class AlumnosService {
   private handleError(err: any) {
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {
-      errorMessage = `An error occurred: ${err.error.message}`;
+      errorMessage = `Ha ocurrido un error: ${err.error.message}`;
     } else {
-      errorMessage = `Backend returned code ${err.status}: ${err.body.error}`;
+      errorMessage = `El servidor envió ${err.status}: ${err.body.error}`;
     }
     console.error(err);
     return throwError(() => errorMessage);

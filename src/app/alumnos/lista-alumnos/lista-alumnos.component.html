@@ -1,1 +1,41 @@
-<p>lista-alumnos works!</p>
+<p>
+  Este parrafo contiene <span appGiveMe20>estas palabras</span> que tienen
+  aplicada la directiva
+</p>
+
+<table mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef>Id</th>
+    <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef>Nombre y apellido</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.nombre }}
+      <!-- // {{ element.nombre | Concat: element.apellido }} -->
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="apellido">
+    <th mat-header-cell *matHeaderCellDef>Apellido</th>
+    <td mat-cell *matCellDef="let element">{{ element.apellido }}</td>
+  </ng-container>
+
+  <!-- Acciones -->
+  <!-- <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef>
+            <button mat-icon-button (click)="editar()">
+                <mat-icon>edit</mat-icon>
+            </button>
+
+            <button mat-icon-button>
+                <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+    </ng-container> -->
+
+  <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnas"></tr>
+</table>
