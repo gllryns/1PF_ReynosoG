@@ -1,6 +1,29 @@
-<p>home works!</p>
-<div>{{ nom | concat: apel }}</div>
-<p>
-  Este parrafo contiene <span appGiveMe20>estas palabras</span> que tienen
-  aplicada la directiva
+<h3 appGiveMe20>Notas de la primera entrega</h3>
+
+<p class="alert alert-warning">
+  Se crea projecto con Angular CLI, con navbar y menu lateral, y un toolbar. El
+  componente de lista de alumnos utiliza mockapi.io para obtener los alumnos
+  utilizando un servicio para la llamada HTTP. La primera respuesta es muy lenta
+  y parece no funcionar, luego tarda aprox 1-2 segundos. En una entrega futura
+  deberia cambiar a json-server o al mockapi de Angular. Las pruebas de
+  mockapi.io con Postman funcionan bien, pero luego de varios intentos para usar
+  observables para hacer el agregar alumno y editar alumno me di por vencido.
+  Debería haberlo hecho con un simple array porque la primera entrega no
+  requeria servicio ni mockapi, pero creo que me conviene estudiar el tema y
+  tratar de hacerlo con el mock y observables que es la parte que más me cuesta.
+  La logica de presentación de los alumnos en listado funcionaba bien y se
+  rompió al tratar de hacer refactoring del proyecto inicial basico con un
+  modulo feature de alumnos, un shared module, etc. Nunca estuve seguro de donde
+  importar o porque no veia un componente o modulo, lo revisaré luego. Trate de
+  usar un router y routerlinks para los enlaces a los componentes, lo mas
+  basico. El pipe y la directiva custom appGiveMe20 están incluidas y en demo en
+  el listado de alumnos. La libreria de bootstrap instalada, usada minimamente
+  para algunos estilos ya que el layout trate de hacerlo con los componentes de
+  angular material schematics.
+</p>
+
+<p class="alert alert-danger">
+  En conclusión, como falla principal queda el abm incompleto del form de alumno
+  que me falla con observables y la mockapi, pero ya tengo que entregar y seguir
+  mi trabajo, para re-estudiar el tema y verlo con más tiempo.
 </p>
