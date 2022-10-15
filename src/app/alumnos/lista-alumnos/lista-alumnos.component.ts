@@ -1,9 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AlumnosService } from '../alumnos.service';
-import { Alumno } from '../model/alumno';
 import { MatTableDataSource } from '@angular/material/table';
-import { DataSource } from '@angular/cdk/collections';
-import { ConcatPipe } from 'src/app/shared/pipes/concat.pipe';
 
 @Component({
   selector: 'app-lista-alumnos',
@@ -13,7 +10,7 @@ import { ConcatPipe } from 'src/app/shared/pipes/concat.pipe';
 export class ListaAlumnosComponent implements OnInit {
   Titulo = 'Listado de alumnos';
   errorMessage: string = '';
-  columnas: string[] = ['id', 'nombre', 'apellido'];
+  columnas: string[] = ['id', 'nombre', 'email', 'edad'];
   public dataSource: any;
 
   constructor(private alumnosService: AlumnosService) {}
